@@ -6,8 +6,8 @@ import ME from "../../public/assets/me.png";
 import HeaderSocials from "./HeaderSocials";
 
 const Header: FC = () => (
-  <header>
-    <div className="container header__container">
+  <header className={s.header}>
+    <div className={`container  ${s.header__container}`}>
       <h5>Hello I`m</h5>
       <h1>Svyatoslav Petrov</h1>
       <h5 className="text-light"> Compositor </h5>
@@ -16,9 +16,7 @@ const Header: FC = () => (
       <div className={`${s.me}`}>
         <Image src={ME} alt="me" />
       </div>
-
-      <a href="#contact" className="scroll__down">
-        {" "}
+      <a href="#contact" className={s.scroll__down}>
         Scroll Down
       </a>
     </div>
