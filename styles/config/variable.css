@@ -8,7 +8,10 @@
 
   --transition: all 600ms ease;
 
-  --container-width-lg: 75cm;
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-ms: 90%;
+  /* --container-width-lg: 75cm;
   --container-width-md: 86cm;
-  --container-width-ms: 90cm;
+  --container-width-ms: 90cm; */
 }
