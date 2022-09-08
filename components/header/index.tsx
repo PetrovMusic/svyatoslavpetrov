@@ -12,14 +12,13 @@ const Header: FC = () => (
       <h1>Svyatoslav Petrov</h1>
       <h5 className="text-light"> Compositor </h5>
       <CTA />
-      {/* TODO image for seo optimization */}
       <div className={`${s.me}`}>
         <Image src={ME} alt="me" />
       </div>
-      <a href="#contact" className={s.scroll__down}>
-        Scroll Down
-      </a>
     </div>
+    <a href="#contact" className={s.scroll__down}>
+      Scroll Down
+    </a>
     <HeaderSocials />
   </header>
 );
