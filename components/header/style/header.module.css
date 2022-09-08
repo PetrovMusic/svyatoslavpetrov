@@ -64,7 +64,14 @@
 /* =========== MEDIA QUERIES (MEDIUM DEVICES) =========== */
 @media screen and (max-width: 1024px) {
   .header {
-    height: 68vh;
+    height: 89vh;
+  }
+  .header__socials {
+    bottom: 3rem;
+  }
+
+  .scroll__down {
+    bottom: 11rem;
   }
 }
 
