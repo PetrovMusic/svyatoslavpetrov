@@ -23,7 +23,7 @@ const About: FC = () => (
           <article className={`${s.about__card}`}>
             <FaAward className={`${s.about__icon}`} />
             <h5> Experience </h5>
-            <small> 6+ Years Working</small>
+            <small> 11+ Years Working</small>
           </article>
           <article className={`${s.about__card}`}>
             <FiUsers className={`${s.about__icon}`} />
@@ -37,10 +37,18 @@ const About: FC = () => (
           </article>
         </div>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
-          doloremque magni earum ex similique placeat iste, amet alias
-          repudiandae beatae totam? Esse quisquam rerum placeat aut doloribus,
-          deserunt sint unde?
+          I was born in Ukraine, and my musical adventures began at the age of 4
+          with a violin. I took part in many competitions and received the Grand
+          Prix at most of them. At the age of 11, I&apos;ve begun to be
+          interested in musical composition, starting with the creation of small
+          pieces for piano and violin, as well as electronic music. Now I can
+          compose music for a large orchestra, EDM, Rock band and pop music.
+          I&apos;ve studied violin and composition at the Benedetto Marcelo
+          Conservatory in Venice, but because I was interested in creating music
+          for video games, movies, television and animation, I got my way to
+          study in Japan. I&apos;ve graduated from Tokyo Visual Arts and have
+          got my first well-paid video game music concerts. Right now I am
+          continuing my journey with new projects and discoveries.
         </p>
         <a href="#contact" className="btn btn-primary">
           Let`s Talk

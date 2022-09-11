@@ -1,6 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import "./config";
 
+.cursor {
+  background-color: #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+*,
+*::before,
+*::after {
+  cursor: none;
+}
+
 * {
   margin: 0;
   padding: 0;
