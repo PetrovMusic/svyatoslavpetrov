@@ -9,6 +9,7 @@ import {
   Header,
   Experience,
   Portfolio,
+  Works,
   Contact,
 } from "../components";
 
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       <Nav />
       <About />
       <Experience />
+      <Works />
       <Portfolio />
       <Testimonials />
       <Contact />

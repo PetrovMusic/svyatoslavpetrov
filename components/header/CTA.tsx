@@ -3,9 +3,9 @@ import s from "./style/header.module.css";
 
 const CTA: FC = () => (
   <div className={`${s.cta}`}>
-    <a href="" download className="btn">
+    <button type="button" className="btn">
       Download CV
-    </a>
+    </button>
     <a href="#contact" className="btn btn-primary">
       Let`s Talk
     </a>
