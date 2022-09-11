@@ -6,7 +6,7 @@ import Header from "./header";
 import Experience from "./experience";
 import Contact from "./contact";
 import Portfolio from "./portfolio";
-import Works from "./works";
+import Works from "./Works";
 
 export {
   Works,
