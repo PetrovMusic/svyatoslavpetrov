@@ -18,14 +18,6 @@ const Nav: FC = () => {
         <AiOutlineHome />
       </a>
       <a
-        title="about"
-        href="#about"
-        onClick={() => setActiveElement("#about")}
-        className={activeElement === "#about" ? s.active : ""}
-      >
-        <AiOutlineUser />
-      </a>
-      <a
         title="experience"
         href="#experience"
         onClick={() => setActiveElement("#experience")}

@@ -1,23 +1,33 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import s from "./style/about.module.css";
+import h from "./style/header.module.css";
 import Work from "../../public/assets/work.jpg";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
+import CTA from "./CTA";
+import HeaderSocials from "./HeaderSocials";
 
 const About: FC = () => (
-  <section id="about">
-    <h5> Get To Know</h5>
-    <h2> About Me</h2>
+  <section id="about" style={{ marginTop: "3rem" }}>
+    <header className={h.header}>
+      <div className={`${h.header__container}`}>
+        <h5>Hello I`m</h5>
+        <h1>Svyatoslav Petrov</h1>
+        <h5 className="text-light"> Compositor </h5>
+      </div>
+    </header>
 
     <div className={`container ${s.about__container}`}>
-      <div className={`${s.about__me}`}>
-        <div className={`${s.about__me__image}`}>
-          <Image src={Work} alt="My work photo" />
+      <div>
+        <div className={`${s.about__me}`}>
+          <div className={`${s.about__me__image}`}>
+            <Image src={Work} alt="My work photo" />
+          </div>
         </div>
+        <HeaderSocials />
       </div>
-
       <div className={`${s.about__content}`}>
         <div className={`${s.about__cards}`}>
           <article className={`${s.about__card}`}>
@@ -28,12 +38,12 @@ const About: FC = () => (
           <article className={`${s.about__card}`}>
             <FiUsers className={`${s.about__icon}`} />
             <h5> Clients </h5>
-            <small> 300 + Worldwide </small>
+            <small> 60+ Worldwide </small>
           </article>
           <article className={`${s.about__card}`}>
             <VscFolderLibrary className={`${s.about__icon}`} />
             <h5> Projects </h5>
-            <small> 400+ completed </small>
+            <small> 100+ completed </small>
           </article>
         </div>
         <p>
@@ -50,9 +60,7 @@ const About: FC = () => (
           got my first well-paid video game music concerts. Right now I am
           continuing my journey with new projects and discoveries.
         </p>
-        <a href="#contact" className="btn btn-primary">
-          Let`s Talk
-        </a>
+        <CTA />
       </div>
     </div>
   </section>

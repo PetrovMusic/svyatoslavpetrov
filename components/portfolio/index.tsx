@@ -10,33 +10,63 @@ declare global {
 const data = [
   {
     id: 1,
+    title: "Lapis x Labyrinth",
     image:
       '<iframe src="https://www.youtube.com/embed/mkxZxz2BqCs" title="ラピス・リ・アビス　プロモーションムービー" allowfullscreen></iframe>',
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/16673715-Crypto-currency-dashboard-and-financial-data-visualization",
+    fullMusic: false,
+    company: "Nihon ichi software Japan",
+    platforms: "PS4, Ps Vita, Nintendo Switch",
+    site: "https://nisamerica.com/games/lapis-labyrinth/",
   },
   {
     id: 2,
+    title: "Liar princess and the blind prince",
     image:
-      '<iframe src="https://www.youtube.com/embed/mkxZxz2BqCs" title="ラピス・リ・アビス　プロモーションムービー" allowfullscreen></iframe>',
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/16673715-Crypto-currency-dashboard-and-financial-data-visualization",
+      '<iframe data-video-id="h9yPYXYkDxQ" class="_lp-youtube-video js-lp-video-youtube _lp-video-item" id="youtube-video-1-13113102" src="https://www.youtube.com/embed/h9yPYXYkDxQ?controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen="" title="嘘つき姫と盲目王子　朗読ムービー"></iframe>',
+    fullMusic: false,
+    company: "Nihon ichi software Japan",
+    platforms: "PS4, Ps Vita, Nintendo Switch",
+    site: "https://nisamerica.com/games/the-liar-princess/",
   },
   {
     id: 3,
+    title: "Kraken Academy!!",
     image:
-      '<iframe src="https://www.youtube.com/embed/mkxZxz2BqCs" title="ラピス・リ・アビス　プロモーションムービー" allowfullscreen></iframe>',
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com",
-    demo: "https://dribbble.com/shots/16673715-Crypto-currency-dashboard-and-financial-data-visualization",
+      '<iframe data-video-id="1QxpadGmKd0" class="_lp-youtube-video js-lp-video-youtube _lp-video-item" id="youtube-video-2-13113102" src="https://www.youtube.com/embed/1QxpadGmKd0?controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen="" title="Kraken Academy!! Steam Trailer"></iframe>',
+    fullMusic: true,
+    company: "happy broccoli games",
+    platforms: "STEAM, GoG",
+    site: "https://www.kraken-academy.com/",
   },
   {
     id: 4,
+    title: "わるい王様とりっぱな勇者",
     image:
-      '<iframe src="https://www.youtube.com/embed/mkxZxz2BqCs" title="ラピス・リ・アビス　プロモーションムービー" allowfullscreen></iframe>',
-    title: "Crypto Currency Dashboard & Financial Visualization",
+      '<iframe src="https://www.youtube.com/embed/SsquS78Q2jg" title="『わるい王様とりっぱな勇者』サウンドトラック試聴ムービー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    fullMusic: false,
+    company: "happy broccoli games",
+    platforms: "STEAM, GoG",
+    site: "https://www.kraken-academy.com/",
+  },
+  {
+    id: 5,
+    title: "Kraken Academy!! (Second Trailer)",
+    image:
+      '<iframe data-video-id="dQs0QBBEDEU" class="_lp-youtube-video js-lp-video-youtube _lp-video-item" id="youtube-video-4-13113102" src="https://www.youtube.com/embed/dQs0QBBEDEU?controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>',
+    fullMusic: true,
+    company: "happy broccoli games",
+    platforms: "STEAM, GoG",
+    site: "https://www.kraken-academy.com/",
+  },
+  {
+    id: 6,
+    title: "Call of the Neon Colors",
+    image:
+      '<iframe data-video-id="aK6Kz0E5qP0" class="_lp-youtube-video js-lp-video-youtube _lp-video-item" id="youtube-video-5-13113102" src="https://www.youtube.com/embed/aK6Kz0E5qP0?controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>',
+    fullMusic: true,
+    company: "Identity V",
+    platforms: "Android, iOS, Microsoft Windows",
+    site: "https://idv.163.com/",
   },
 ];
 
@@ -138,19 +168,40 @@ const Portfolio: FC = () => {
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
       <div className={`container ${s.portfolio__container}`}>
-        {data.map(({ id, image, title, github, demo }) => {
-          return (
-            <article key={id} className={`${s.portfolio__item}`}>
-              <span
-                className={s.portfolio__item__image}
-                dangerouslySetInnerHTML={createMarkup(image)}
-              />
-              <h3>{title}</h3>
-            </article>
-          );
-        })}
+        {data.map(
+          ({ id, image, title, platforms, site, company, fullMusic }) => {
+            return (
+              <article key={id} className={`${s.portfolio__item}`}>
+                <span
+                  className={s.portfolio__item__image}
+                  dangerouslySetInnerHTML={createMarkup(image)}
+                />
+                <h2 className={s.title}>{title}</h2>
+                <h3 className={s.text}>
+                  <span>
+                    {fullMusic
+                      ? "Music By Svyatoslav Petrov"
+                      : "Part of the music by Petrov Svyatoslav"}
+                  </span>
+                </h3>
+                <h3 className={s.text}>
+                  Company: <span>{company}</span>
+                </h3>
+                <h3 className={s.text}>
+                  Platforms: <span>{platforms}</span>
+                </h3>
+                <h3 className={s.text}>
+                  Company ​​​​​​​Official Web-site:
+                  <a className={s.link} href={site}>
+                    {" "}
+                    Link{" "}
+                  </a>
+                </h3>
+              </article>
+            );
+          }
+        )}
       </div>
-      <h5>My Noncomercional Work</h5>
       <div className={`container ${s.iframe}`}>
         <iframe
           ref={iframeRef as any}
@@ -159,6 +210,15 @@ const Portfolio: FC = () => {
           allow="autoplay"
           src={
             "https://w.soundcloud.com/player/?url=https://soundcloud.com/svyatoslav-petrov"
+          }
+        />
+        <iframe
+          ref={iframeRef as any}
+          id="sound-cloud-player"
+          scrolling="no"
+          allow="autoplay"
+          src={
+            "https://w.soundcloud.com/player/?url=https://soundcloud.com/neversleepboy"
           }
         />
       </div>

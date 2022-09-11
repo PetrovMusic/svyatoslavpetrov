@@ -1,18 +1,10 @@
 import React, { FC } from "react";
 import s from "./style/header.module.css";
-import { BsLinkedin, BsTwitter, BsSpotify, BsFacebook } from "react-icons/bs";
+import { BsTwitter, BsSpotify, BsFacebook } from "react-icons/bs";
 import { GrSoundcloud } from "react-icons/gr";
 
 const HeaderSocials: FC = () => (
   <div className={`${s.header__socials}`}>
-    <a
-      title="linkedin"
-      href="https://www.linkedin.com/in/svyatoslav-petrov-2878891a4/"
-      target="_blank"
-      rel="noreferrer noopener"
-    >
-      <BsLinkedin />
-    </a>
     <a
       title="sound cloud"
       href="https://soundcloud.com/svyatoslav-petrov"

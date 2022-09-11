@@ -22,7 +22,16 @@ i18n
   });
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      {" "}
+      <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap"
+        rel="stylesheet"
+      />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;

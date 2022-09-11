@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import s from "./style/footer.module.css";
 import { FaFacebookF } from "react-icons/fa";
-import { FiInstagram } from "react-icons/fi";
 import { IoLogoTwitter } from "react-icons/io";
 
 const Footer: FC = () => (
@@ -36,9 +35,6 @@ const Footer: FC = () => (
     <div className={`${s.footer__socials}`}>
       <a href="https://facebook.com" title="social_network_link">
         <FaFacebookF />
-      </a>
-      <a href="https://instagram.com" title="social_network_link">
-        <FiInstagram />
       </a>
       <a href="https://twitter.com" title="social_network_link">
         <IoLogoTwitter />

@@ -1,9 +1,8 @@
-import React, { FC } from "react";
+import React, { FC, useRef } from "react";
 import s from "./style/contact.module.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
-import { BsWhatsapp } from "react-icons/bs";
-import { useRef } from "react";
+import { FaTelegramPlane } from "react-icons/fa";
 import emailjs from "emailjs-com";
 
 const Contact: FC = () => {
@@ -36,16 +35,14 @@ const Contact: FC = () => {
           <article className={`${s.contact__option}`}>
             <RiMessengerLine className={`${s.contact__option__icon}`} />
             <h4>Messenger</h4>
-            <h5>Svyat</h5>
-            <a href="https://m.me/amit.halevi.5.com">Send a message</a>
+            <h5>Svyatoslav Petrov</h5>
+            <a href="https://m.me/svyatoslav.petrov.composer">Send a message</a>
           </article>
           <article className={`${s.contact__option}`}>
-            <BsWhatsapp className={`${s.contact__option__icon}`} />
-            <h4>WhatsApp</h4>
-            <h5>+123456789</h5>
-            <a href="https://api.whatsapp.com/send?phone=0542395715">
-              Send a message
-            </a>
+            <FaTelegramPlane className={`${s.contact__option__icon}`} />
+            <h4>Telegram</h4>
+            <h5>+380 63 300 4489</h5>
+            <a href="https://t.me/Svyatoslavpetrov">Send a message</a>
           </article>
         </div>
         {/* End Of Contact Options */}

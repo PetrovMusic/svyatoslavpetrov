@@ -3,9 +3,14 @@ import s from "./style/header.module.css";
 
 const CTA: FC = () => (
   <div className={`${s.cta}`}>
-    <button type="button" className="btn" style={{ background: "transparent" }}>
+    <a
+      download
+      className="btn"
+      href="../../public/assets/Svyatoslav_Petrov_-_Composer_for_media_.pdf"
+      style={{ background: "transparent" }}
+    >
       Download CV
-    </button>
+    </a>
     <a href="#contact" className="btn btn-primary">
       Let`s Talk
     </a>
