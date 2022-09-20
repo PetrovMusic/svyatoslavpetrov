@@ -58,16 +58,6 @@ const data = [
     platforms: "STEAM, GoG",
     site: "https://www.kraken-academy.com/",
   },
-  {
-    id: 6,
-    title: "Call of the Neon Colors",
-    image:
-      '<iframe data-video-id="aK6Kz0E5qP0" class="_lp-youtube-video js-lp-video-youtube _lp-video-item" id="youtube-video-5-13113102" src="https://www.youtube.com/embed/aK6Kz0E5qP0?controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>',
-    fullMusic: true,
-    company: "Identity V",
-    platforms: "Android, iOS, Microsoft Windows",
-    site: "https://idv.163.com/",
-  },
 ];
 
 const Portfolio: FC = () => {
