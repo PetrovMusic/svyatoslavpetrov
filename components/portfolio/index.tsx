@@ -22,7 +22,7 @@ const data = [
     id: 2,
     title: "Liar princess and the blind prince",
     image:
-      '<iframe data-video-id="h9yPYXYkDxQ" class="_lp-youtube-video js-lp-video-youtube _lp-video-item" id="youtube-video-1-13113102" src="https://www.youtube.com/embed/h9yPYXYkDxQ?controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen="" title="嘘つき姫と盲目王子　朗読ムービー"></iframe>',
+      '<iframe src="https://www.youtube.com/embed/h9yPYXYkDxQ"allowfullscreen title="嘘つき姫と盲目王子　朗読ムービー"></iframe>',
     fullMusic: false,
     company: "Nihon ichi software Japan",
     platforms: "PS4, Ps Vita, Nintendo Switch",
@@ -32,7 +32,7 @@ const data = [
     id: 3,
     title: "Kraken Academy!!",
     image:
-      '<iframe data-video-id="1QxpadGmKd0" class="_lp-youtube-video js-lp-video-youtube _lp-video-item" id="youtube-video-2-13113102" src="https://www.youtube.com/embed/1QxpadGmKd0?controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen="" title="Kraken Academy!! Steam Trailer"></iframe>',
+      '<iframe src="https://www.youtube.com/embed/1QxpadGmKd0" allowfullscreen title="Kraken Academy!! Steam Trailer"></iframe>',
     fullMusic: true,
     company: "happy broccoli games",
     platforms: "STEAM, GoG",
@@ -42,7 +42,7 @@ const data = [
     id: 4,
     title: "わるい王様とりっぱな勇者",
     image:
-      '<iframe src="https://www.youtube.com/embed/SsquS78Q2jg" title="『わるい王様とりっぱな勇者』サウンドトラック試聴ムービー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      '<iframe src="https://www.youtube.com/embed/SsquS78Q2jg" title="『わるい王様とりっぱな勇者』サウンドトラック試聴ムービー" allowfullscreen></iframe>',
     fullMusic: false,
     company: "happy broccoli games",
     platforms: "STEAM, GoG",
@@ -52,7 +52,7 @@ const data = [
     id: 5,
     title: "Kraken Academy!! (Second Trailer)",
     image:
-      '<iframe data-video-id="dQs0QBBEDEU" class="_lp-youtube-video js-lp-video-youtube _lp-video-item" id="youtube-video-4-13113102" src="https://www.youtube.com/embed/dQs0QBBEDEU?controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>',
+      '<iframe src="https://www.youtube.com/embed/dQs0QBBEDEU" allowfullscreen></iframe>',
     fullMusic: true,
     company: "happy broccoli games",
     platforms: "STEAM, GoG",
