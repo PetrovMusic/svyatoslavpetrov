@@ -1,6 +1,6 @@
 .experience__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -35,9 +35,11 @@
   gap: 1rem;
 }
 
-.experience__details-icon {
+.experience__details__icon {
   margin-top: 6px;
   color: var(--color-primary);
+  width: 30px;
+  height: 30px;
 }
 
 /* ================== Media Queries (Medium Devices) ================== */
