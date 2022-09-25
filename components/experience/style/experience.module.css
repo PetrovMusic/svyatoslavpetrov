@@ -38,8 +38,10 @@
 .experience__details__icon {
   margin-top: 6px;
   color: var(--color-primary);
-  width: 30px;
-  height: 30px;
+  max-width: 15px;
+  max-height: 15px;
+  min-width: 15px;
+  min-height: 15px;
 }
 
 /* ================== Media Queries (Medium Devices) ================== */

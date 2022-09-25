@@ -6,13 +6,17 @@ const CTA: FC = () => (
     <a
       download
       className="btn"
-      href="../../public/assets/Svyatoslav_Petrov_-_Composer_for_media_.pdf"
+      href="../../public/assets/Svyatoslav English Resume.pdf"
       style={{ background: "transparent" }}
     >
-      Download CV
+      Download CV [ENG]
     </a>
-    <a href="#contact" className="btn btn-primary">
-      Let`s Talk
+    <a
+      href="../../public/assets/Svyatoslav_Petrov_japanese_Resume.pdf"
+      className="btn btn-primary"
+      download
+    >
+      Download CV [JP]
     </a>
   </div>
 );

@@ -5,34 +5,39 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import s from "./style/testimonials.module.css";
-import AVTR1 from "../../public/assets/avatar1.jpg";
-import AVTR2 from "../../public/assets/avatar2.jpg";
-import AVTR3 from "../../public/assets/avatar3.jpg";
-import AVTR4 from "../../public/assets/avatar4.jpg";
+import Anika from "../../public/assets/Annika.jpg";
+import Oleg from "../../public/assets/Oleg.jpg";
+import Kuo from "../../public/assets/Kuo.jpg";
+import Nicole from "../../public/assets/Nicole.jpg";
 const data = [
   {
-    avatar: AVTR1,
-    name: "Tina Snow",
+    avatar: Nicole,
+    name: "Nicole L",
+    position: "Music Director/Producer",
     review:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quisquam aspernatur consequuntur itaque obcaecati maiores vel saepe minima. Eligendi doloribus quam culpa hic consequuntur autem quod voluptas, molestias quisquam laboriosam.",
+      "Svyatoslav is a very imaginative man.He can give me many creative ideas!He also knows a lot about various games and he is always pleased to share something with me.I can learn a lot of interesting things when I work with him!",
   },
   {
-    avatar: AVTR2,
-    name: "Shatta Wale",
+    avatar: Oleg,
+    name: "Oleg",
+    position: "Lead Producer",
     review:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quisquam aspernatur consequuntur itaque obcaecati maiores vel saepe minima. Eligendi doloribus quam culpa hic consequuntur autem quod voluptas, molestias quisquam laboriosam.",
+      "Passionate and efficient, that’s how I would describe Svyatoslav. I had the pleasure of working with him on several projects, and he delivered exceptional results. I am always impressed by Svyatoslav’s ability to craft a fantastic soundscape for any game or experience.",
   },
   {
-    avatar: AVTR3,
-    name: "Kwame Depite",
+    avatar: Anika,
+    name: "Annika Maar",
+    position: "CEO",
     review:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quisquam aspernatur consequuntur itaque obcaecati maiores vel saepe minima. Eligendi doloribus quam culpa hic consequuntur autem quod voluptas, molestias quisquam laboriosam.",
+      "Working with Svyatoslav is always a blast! He knows exactly what we want from a piece and puts his own personal spin on it.\r\nスビアトスラブと一緒に制作するっていつも安心で楽しいです。個人性の込めたシーンにぴったりな音楽です。",
   },
   {
-    avatar: AVTR4,
-    name: "Nana Ama McBrown",
+    avatar: Kuo,
+    name: "Kuo Yu",
+    position: "Music Director/Producer",
+
     review:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit quisquam aspernatur consequuntur itaque obcaecati maiores vel saepe minima. Eligendi doloribus quam culpa hic consequuntur autem quod voluptas, molestias quisquam laboriosam.",
+      "Svyatoslav always brings his unique taste to our music. I love diving into the details with him cuz he's one of the most open minded composer.",
   },
 ];
 

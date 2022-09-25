@@ -10,11 +10,6 @@
   left: 0;
   pointer-events: none;
 }
-*,
-*::before,
-*::after {
-  cursor: none;
-}
 
 * {
   margin: 0;

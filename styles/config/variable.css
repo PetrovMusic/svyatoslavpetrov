@@ -1,8 +1,20 @@
 :root {
-  --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-bg: #070d17;
+  --color-bg-variant: linear-gradient(
+    126.21deg,
+    #6a35ee 12%,
+    #9930ef 2.24%,
+    #5737ee 39.56%,
+    #795ceb 93.2%
+  );
+  --color-primary: linear-gradient(
+    126.21deg,
+    #6a35ee 0%,
+    #9930ef 14.24%,
+    #5737ee 49.56%,
+    #795ceb 93.2%
+  );
+  --color-primary-variant: #495057;
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
   --transition: all 600ms ease;
