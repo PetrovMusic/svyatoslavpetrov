@@ -53,13 +53,6 @@ const Experience: FC = () => (
               </small>
             </div>
           </article>
-          <article className={`${s.experience__details}`}>
-            <BsPatchCheckFill className={`${s.experience__details__icon}`} />
-            <div>
-              <h4>Abelton</h4>
-              <small className="text-light"> Intermediate </small>
-            </div>
-          </article>
         </div>
       </div>
     </div>

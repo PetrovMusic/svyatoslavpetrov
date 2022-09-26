@@ -193,6 +193,21 @@ const Portfolio: FC = () => {
         )}
       </div>
       <div className={`container ${s.iframe}`}>
+        <ul>
+          <li>World of Tanks blitz</li>
+          <li>The Liar Princess and the Blind Prince The Cruel</li>
+          <li>King and the Great Hero</li>
+          <li>Identity V</li>
+          <li>Kraken Academy!!</li>
+          <li>Lapis x labyrinth</li>
+          <li>TELEPORT BATTLE VR</li>
+        </ul>
+        <p>
+          A lot of works on which I worked and working are under NDA, so for
+          more information, don&rsquo;t hesitate to contact me.
+        </p>
+      </div>
+      <div className={`container ${s.iframe}`}>
         <iframe
           ref={iframeRef as any}
           id="sound-cloud-player"

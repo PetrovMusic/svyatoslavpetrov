@@ -12,6 +12,7 @@ import {
   Experience,
   Portfolio,
   Works,
+  Companies,
   Contact,
 } from "../components";
 
@@ -73,6 +74,7 @@ const Home: NextPage = () => {
       <Portfolio />
       {/* <Company /> */}
       <Testimonials />
+      <Companies />
       <Experience />
       <Nav />
       <Contact />

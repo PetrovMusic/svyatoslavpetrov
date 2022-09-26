@@ -1,4 +1,6 @@
 :root {
+  --logo-max-width: 120px;
+  --logo-max-height: 60px;
   --color-bg: #070d17;
   --color-bg-variant: linear-gradient(
     126.21deg,
