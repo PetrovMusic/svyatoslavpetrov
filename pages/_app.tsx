@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap"
         rel="stylesheet"
       />
       <Component {...pageProps} />

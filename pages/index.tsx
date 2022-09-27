@@ -106,12 +106,30 @@ const Home: NextPage = (props) => {
         workOn={t("default:work_on")}
         workDescription={t("default:work_description")}
       />
-      <Testimonials />
+      <Testimonials
+        title={t("default:review")}
+        subtitle={t("default:testimonials")}
+      />
       <Companies />
       <Experience />
       <Nav />
-      <Contact />
-      <Footer />
+      <Contact
+        title={t("default:review")}
+        subtitle={t("default:review")}
+        inputs={{
+          name: " string",
+          email: " string",
+          msg: " string",
+          send: " string",
+        }}
+      />
+      <Footer
+        name={t("default:name")}
+        exp={t("default:experience")}
+        portfolio={t("default:portfolio")}
+        testimonial={t("default:testimonials")}
+        contact={t("default:contact")}
+      />
     </>
   );
 };

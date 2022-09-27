@@ -41,10 +41,14 @@ const data = [
   },
 ];
 
-const Testimonials: FC = () => (
+export type TestimonialsProps = {
+  title: string;
+  subtitle: string;
+};
+const Testimonials: FC<TestimonialsProps> = ({ title, subtitle }) => (
   <section id="testimonials">
-    <h5>Review from clients</h5>
-    <h2>Testimonials</h2>
+    <h5>{title}</h5>
+    <h2>{subtitle}</h2>
     <Swiper
       className={`container ${s.container} ${s.testimonials__container}`}
       modules={[Pagination]}

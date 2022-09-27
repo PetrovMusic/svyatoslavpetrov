@@ -3,32 +3,36 @@ import s from "./style/footer.module.css";
 import { FaFacebookF } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io";
 
-const Footer: FC = () => (
+export type FooterProps = {
+  name: string;
+  exp: string;
+  portfolio: string;
+  testimonial: string;
+  contact: string;
+};
+const Footer: FC<FooterProps> = ({
+  name,
+  exp,
+  portfolio,
+  testimonial,
+  contact,
+}) => (
   <footer className={s.footer}>
     <a href="#" className={`${s.footer__logo}`}>
-      Svyatoslav Petrov
+      {name}
     </a>
     <ul className={`${s.permalinks}`}>
       <li>
-        <a href="#">Home</a>
+        <a href="#experience">{exp}</a>
       </li>
       <li>
-        <a href="#about">About</a>
+        <a href="#portfolio">{portfolio}</a>
       </li>
       <li>
-        <a href="#experience">Experience</a>
+        <a href="#testimonials">{testimonial}</a>
       </li>
       <li>
-        <a href="#services">Services</a>
-      </li>
-      <li>
-        <a href="#protfolio">Portfolio</a>
-      </li>
-      <li>
-        <a href="#testimonials">Testimonials</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
+        <a href="#contact">{contact}</a>
       </li>
     </ul>
 
@@ -42,24 +46,9 @@ const Footer: FC = () => (
     </div>
 
     <div className={`${s.footer__copyright}`}>
-      <small>&copy; Svyatoslav Petrov. All right reserved.</small>
+      <small>&copy; {name}. All right reserved.</small>
     </div>
   </footer>
 );
 
 export default Footer;
-
-{
-  /* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */
-}
