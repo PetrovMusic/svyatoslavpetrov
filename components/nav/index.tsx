@@ -18,20 +18,20 @@ const Nav: FC = () => {
         <AiOutlineHome />
       </a>
       <a
+        title="portfolio"
+        href="#portfolio"
+        onClick={() => setActiveElement("#portfolio")}
+        className={activeElement === "#portfolio" ? s.active : ""}
+      >
+        <RiServiceLine />
+      </a>
+      <a
         title="experience"
         href="#experience"
         onClick={() => setActiveElement("#experience")}
         className={activeElement === "#experience" ? s.active : ""}
       >
         <BiBook />
-      </a>
-      <a
-        title="services"
-        href="#services"
-        onClick={() => setActiveElement("#services")}
-        className={activeElement === "#services" ? s.active : ""}
-      >
-        <RiServiceLine />
       </a>
       <a
         title="contact"

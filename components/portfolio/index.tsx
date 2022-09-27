@@ -60,7 +60,18 @@ const data = [
   },
 ];
 
-const Portfolio: FC = () => {
+export type PortfolioProps = {
+  title: string;
+  subtitle: string;
+  workOn: string;
+  workDescription: string;
+};
+const Portfolio: FC<PortfolioProps> = ({
+  title,
+  subtitle,
+  workOn,
+  workDescription,
+}) => {
   function createMarkup(html: string) {
     return { __html: html };
   }
@@ -155,8 +166,8 @@ const Portfolio: FC = () => {
 
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <h5>{title}</h5>
+      <h2>{subtitle}</h2>
       <div className={`container ${s.portfolio__container}`}>
         {data.map(
           ({ id, image, title, platforms, site, company, fullMusic }) => {
@@ -192,8 +203,9 @@ const Portfolio: FC = () => {
           }
         )}
       </div>
-      <div className={`container ${s.iframe}`}>
-        <ul>
+      <div className={`container ${s.text__block}`}>
+        <h4 className={s.text__block__title}>{workOn}</h4>
+        <ul className={`${s.list} ${s.style2}`}>
           <li>World of Tanks blitz</li>
           <li>The Liar Princess and the Blind Prince The Cruel</li>
           <li>King and the Great Hero</li>
@@ -202,10 +214,7 @@ const Portfolio: FC = () => {
           <li>Lapis x labyrinth</li>
           <li>TELEPORT BATTLE VR</li>
         </ul>
-        <p>
-          A lot of works on which I worked and working are under NDA, so for
-          more information, don&rsquo;t hesitate to contact me.
-        </p>
+        <p className={s.text__block__text}>{workDescription}</p>
       </div>
       <div className={`container ${s.iframe}`}>
         <iframe

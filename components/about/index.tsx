@@ -9,13 +9,39 @@ import { VscFolderLibrary } from "react-icons/vsc";
 import CTA from "./CTA";
 import HeaderSocials from "./HeaderSocials";
 
-const About: FC = () => (
+export type AboutProps = {
+  greating: string;
+  name: string;
+  position: string;
+  exp: {
+    name: string;
+    assets: string;
+  };
+  clients: {
+    name: string;
+    assets: string;
+  };
+  projects: {
+    name: string;
+    assets: string;
+  };
+  desc: string;
+};
+const About: FC<AboutProps> = ({
+  greating,
+  name,
+  position,
+  exp,
+  clients,
+  projects,
+  desc,
+}) => (
   <section id="about" style={{ marginTop: "3rem" }}>
     <header className={h.header}>
       <div className={`${h.header__container}`}>
-        <h5>Hello I`m</h5>
-        <h1>Svyatoslav Petrov</h1>
-        <h5 className="text-light"> Compositor </h5>
+        <h5>{greating}</h5>
+        <h1>{name}</h1>
+        <h5 className="text-light"> {position} </h5>
       </div>
     </header>
 
@@ -32,34 +58,21 @@ const About: FC = () => (
         <div className={`${s.about__cards}`}>
           <article className={`${s.about__card}`}>
             <FaAward className={`${s.about__icon}`} />
-            <h5> Experience </h5>
-            <small> 11+ Years Working</small>
+            <h5> {exp.name}</h5>
+            <small> {exp.assets}</small>
           </article>
           <article className={`${s.about__card}`}>
             <FiUsers className={`${s.about__icon}`} />
-            <h5> Clients </h5>
-            <small> 60+ Worldwide </small>
+            <h5> {clients.name}</h5>
+            <small> {clients.assets} </small>
           </article>
           <article className={`${s.about__card}`}>
             <VscFolderLibrary className={`${s.about__icon}`} />
-            <h5> Projects </h5>
-            <small> 100+ completed </small>
+            <h5> {projects.name} </h5>
+            <small> {projects.assets}</small>
           </article>
         </div>
-        <p>
-          I was born in Ukraine, and my musical adventures began at the age of 4
-          with a violin. I took part in many competitions and received the Grand
-          Prix at most of them. At the age of 11, I&apos;ve begun to be
-          interested in musical composition, starting with the creation of small
-          pieces for piano and violin, as well as electronic music. Now I can
-          compose music for a large orchestra, EDM, Rock band and pop music.
-          I&apos;ve studied violin and composition at the Benedetto Marcelo
-          Conservatory in Venice, but because I was interested in creating music
-          for video games, movies, television and animation, I got my way to
-          study in Japan. I&apos;ve graduated from Tokyo Visual Arts and have
-          got my first well-paid video game music concerts. Right now I am
-          continuing my journey with new projects and discoveries.
-        </p>
+        <p>{desc}</p>
         <CTA />
       </div>
     </div>

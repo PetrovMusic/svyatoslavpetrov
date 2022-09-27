@@ -37,6 +37,7 @@ const data = [
 
 const Companies: FC = () => (
   <section id="companies" className={s.container}>
+    <h4 className={s.title}>Companies i worked with:</h4>
     <ul className={s.logogrid}>
       {data.map(({ logo, link, altLogo }) => (
         <li key={link} className={s.logogrid__item}>

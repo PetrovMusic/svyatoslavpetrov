@@ -57,9 +57,6 @@
   .container {
     width: var(--container-width-md);
   }
-  .header {
-    height: 68vh;
-  }
 }
 
 /* ================== Media Queries (Small Devices) ================== */

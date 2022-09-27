@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import {
   About,
   Nav,
@@ -15,8 +16,18 @@ import {
   Companies,
   Contact,
 } from "../components";
+import { useTranslation } from "react-i18next";
 
-const Home: NextPage = () => {
+export async function getStaticProps({ locale }: { locale: any }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["default"])),
+    },
+  };
+}
+const Home: NextPage = (props) => {
+  const { t } = useTranslation();
+
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -60,19 +71,41 @@ const Home: NextPage = () => {
   const textLeave = () => setCursorVariant("default");
   return (
     <>
-      {/* <motion.div
-        className="cursor"
-        variants={variants as any}
-        animate={cursorVariant}
-      ></motion.div> */}
       <Head>
         <title>Compositor Svyatoslav Petrov</title>
         <meta name="description" content="Svyatoslav Petrov Compositor" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <About />
-      <Portfolio />
-      {/* <Company /> */}
+      {/* <motion.div
+        className="cursor"
+        variants={variants as any}
+        animate={cursorVariant}
+      /> */}
+
+      <About
+        greating={t("default:hello")}
+        name={t("default:name")}
+        position={t("default:compositor")}
+        exp={{
+          name: t("default:experience"),
+          assets: `${t("default:years")} ${t("default:working")}`,
+        }}
+        clients={{
+          name: t("default:сlients"),
+          assets: `60+ ${t("default:worldwide")}`,
+        }}
+        projects={{
+          name: t("default:projects"),
+          assets: `100+ ${t("default:completed")}`,
+        }}
+        desc={t("default:about_desc")}
+      />
+      <Portfolio
+        title={t("default:recent_work")}
+        subtitle={t("default:portfolio")}
+        workOn={t("default:work_on")}
+        workDescription={t("default:work_description")}
+      />
       <Testimonials />
       <Companies />
       <Experience />
