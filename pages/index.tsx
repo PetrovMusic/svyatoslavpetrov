@@ -1,18 +1,14 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import type { NextPage } from "next";
-import { motion } from "framer-motion";
 import Head from "next/head";
-import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import {
   About,
   Nav,
   Testimonials,
   Footer,
-  Header,
   Experience,
   Portfolio,
-  Works,
   Companies,
   Contact,
 } from "../components";
@@ -27,48 +23,6 @@ export async function getStaticProps({ locale }: { locale: any }) {
 }
 const Home: NextPage = (props) => {
   const { t } = useTranslation();
-
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
-  // Set cursor variant to change color on hover text
-  const [cursorVariant, setCursorVariant] = useState("default");
-
-  useEffect(() => {
-    const mouseMove = (e: any) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
-    };
-
-    window.addEventListener("mousemove", mouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", mouseMove);
-    };
-  }, []);
-
-  // Variant animation
-  const variants = {
-    default: {
-      x: mousePosition.x - 8,
-      y: mousePosition.y - 8,
-    },
-    text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 70,
-      y: mousePosition.y - 70,
-      backgroundColor: "aqua",
-      mixBlendMode: "difference",
-    },
-  };
-
-  // function for textLeave and textEnter
-  const textEnter = () => setCursorVariant("text");
-  const textLeave = () => setCursorVariant("default");
   return (
     <>
       <Head>
@@ -76,12 +30,6 @@ const Home: NextPage = (props) => {
         <meta name="description" content="Svyatoslav Petrov Compositor" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <motion.div
-        className="cursor"
-        variants={variants as any}
-        animate={cursorVariant}
-      /> */}
-
       <About
         greating={t("default:hello")}
         name={t("default:name")}
@@ -110,17 +58,27 @@ const Home: NextPage = (props) => {
         title={t("default:review")}
         subtitle={t("default:testimonials")}
       />
-      <Companies />
-      <Experience />
+      <Companies title={t("default:company_on")} />
+      <Experience
+        title={t("default:my_experience")}
+        composing={t("default:my_experience_composing")}
+        composing__desc={t("default:my_experience_composing_desc")}
+        score={t("default:my_experience_score")}
+        score__desc={t("default:my_experience_score_desc")}
+        flexible={t("default:my_experience_flexible")}
+        flexible__desc={t("default:my_experience_flexible_desc")}
+        mixing={t("default:my_experience_mastering")}
+        mixing__desc={t("default:my_experience_mastering_desc")}
+      />
       <Nav />
       <Contact
         title={t("default:review")}
         subtitle={t("default:review")}
         inputs={{
-          name: " string",
-          email: " string",
-          msg: " string",
-          send: " string",
+          name: t("default:full_name"),
+          email: t("default:email"),
+          msg: t("default:message"),
+          send: t("default:contact_me"),
         }}
       />
       <Footer

@@ -6,12 +6,10 @@ import Header from "./header";
 import Experience from "./experience";
 import Contact from "./contact";
 import Portfolio from "./portfolio";
-import Works from "./Works";
 import Companies from "./companies";
 
 export {
   Companies,
-  Works,
   About,
   Nav,
   Testimonials,

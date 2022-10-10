@@ -23,7 +23,7 @@ const HeaderSocials: FC = () => (
     </a>
     <a
       title="spotify"
-      href="https://open.spotify.com/artist/7nYRGtrzsuniyQWeaYbCWi"
+      href="https://open.spotify.com/album/19xgbOBGPP8ARr1BIgGaCm"
       target="_blank"
       rel="noreferrer noopener"
     >

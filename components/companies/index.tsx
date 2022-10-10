@@ -29,13 +29,18 @@ const data = [
   },
 ];
 
-const Companies: FC = () => (
+const Companies: FC<{ title: string }> = ({ title }) => (
   <section id="companies" className={s.container}>
-    <h4 className={s.title}>Companies i worked with:</h4>
+    <h4 className={s.title}>{title}</h4>
     <ul className={s.logogrid}>
       {data.map(({ logo, link, altLogo }) => (
         <li key={link} className={s.logogrid__item}>
-          <a href={link} className={s.logogrid__img}>
+          <a
+            href={link}
+            className={s.logogrid__img}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image src={logo} alt={`${altLogo} logo`} />
           </a>
         </li>

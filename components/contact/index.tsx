@@ -2,7 +2,7 @@ import React, { FC, useRef } from "react";
 import s from "./style/contact.module.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaTelegramPlane, FaDiscord } from "react-icons/fa";
 import emailjs from "emailjs-com";
 
 export type ContactProps = {
@@ -31,9 +31,7 @@ const Contact: FC<ContactProps> = ({ title, subtitle, inputs }) => {
 
   return (
     <section id="contact">
-      <h5>{title}</h5>
-      <h2>{subtitle}</h2>
-
+      <h2>{title}</h2>
       <div className={` container ${s.container} ${s.contact__container}`}>
         <div className={`${s.contact__options}`}>
           <article className={`${s.contact__option}`}>
@@ -51,11 +49,16 @@ const Contact: FC<ContactProps> = ({ title, subtitle, inputs }) => {
               {inputs.send}{" "}
             </a>
           </article>
-          <article className={`${s.contact__option}`}>
+          {/* <article className={`${s.contact__option}`}>
             <FaTelegramPlane className={`${s.contact__option__icon}`} />
             <h4>Telegram</h4>
             <h5>+380 63 300 4489</h5>
             <a href="https://t.me/Svyatoslavpetrov"> {inputs.send} </a>
+          </article> */}
+          <article className={`${s.contact__option}`}>
+            <FaDiscord className={`${s.contact__option__icon}`} />
+            <h4>Discord</h4>
+            <h5>Saint Slav#9780</h5>
           </article>
         </div>
         {/* End Of Contact Options */}

@@ -189,13 +189,14 @@ const Portfolio: FC<PortfolioProps> = ({
                   Company: <span>{company}</span>
                 </h3>
                 <h3 className={s.text}>
-                  Platforms: <span>{platforms}</span>
-                </h3>
-                <h3 className={s.text}>
                   Company ​​​​​​​Official Web-site:
-                  <a className={s.link} href={site}>
-                    {" "}
-                    Link{" "}
+                  <a
+                    className={s.link}
+                    href={site}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Link
                   </a>
                 </h3>
               </article>

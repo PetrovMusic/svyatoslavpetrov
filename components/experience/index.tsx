@@ -2,55 +2,60 @@ import React, { FC } from "react";
 import s from "./style/experience.module.css";
 import { BsPatchCheckFill } from "react-icons/bs";
 
-const Experience: FC = () => (
-  <section id="experience">
-    <h5>What Skills I Have</h5>
-    <h2>My Experience</h2>
+export type ExperienceProps = {
+  title: string;
+  composing: string;
+  composing__desc: string;
+  score: string;
+  score__desc: string;
+  flexible: string;
+  flexible__desc: string;
+  mixing: string;
+  mixing__desc: string;
+};
 
+const Experience: FC<ExperienceProps> = ({
+  title,
+  composing,
+  composing__desc,
+  score,
+  score__desc,
+  flexible,
+  flexible__desc,
+  mixing,
+  mixing__desc,
+}) => (
+  <section id="experience">
     <div className={`container ${s.experience__container}`}>
       <div className={`${s.experience__right}`}>
-        <h3>My Experience</h3>
+        <h3>{title}</h3>
         <div className={`${s.experience__content}`}>
           <article className={`${s.experience__details}`}>
             <BsPatchCheckFill className={`${s.experience__details__icon}`} />
             <div>
-              <h4>Composing</h4>
-              <small className="text-light">
-                Writing piece from 0 to Hero: Classical, Electronic, Ethnic,
-                Orchestral in any style, modern Orchestra hybrid (with elements
-                of electronica), Band Rock music.
-              </small>
+              <h4>{composing}</h4>
+              <small className="text-light">{composing__desc}</small>
             </div>
           </article>
           <article className={`${s.experience__details}`}>
             <BsPatchCheckFill className={`${s.experience__details__icon}`} />
             <div>
-              <h4>Score making</h4>
-              <small className="text-light">
-                Making trully comfortable scores for musicians, so they can make
-                100% from it.
-              </small>
+              <h4>{score}</h4>
+              <small className="text-light">{score__desc}</small>
             </div>
           </article>
           <article className={`${s.experience__details}`}>
             <BsPatchCheckFill className={`${s.experience__details__icon}`} />
             <div>
-              <h4>Flexible</h4>
-              <small className="text-light">
-                I am working with a team of life-long musicians, but you get to
-                choose how many professionals to hire: one person or whole
-                orchestra!
-              </small>
+              <h4>{flexible}</h4>
+              <small className="text-light">{flexible__desc}</small>
             </div>
           </article>
           <article className={`${s.experience__details}`}>
             <BsPatchCheckFill className={`${s.experience__details__icon}`} />
             <div>
-              <h4>Mixing & Mastering</h4>
-              <small className="text-light">
-                Of course i do Mix by my self, and Mastering. So you don`&apos`t
-                need to worries about extra fees
-              </small>
+              <h4>{mixing}</h4>
+              <small className="text-light">{mixing__desc}</small>
             </div>
           </article>
         </div>
